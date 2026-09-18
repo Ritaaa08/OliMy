@@ -1,6 +1,6 @@
 # Message à envoyer au client (à adapter)
 
-> Remplacer `LIEN-APERCU` par l'adresse GitHub Pages, et ajouter votre nom.
+> Ajouter votre nom à la fin.
 
 ---
 
@@ -8,7 +8,7 @@ Bonjour,
 
 Le nouveau site d'OliMy est prêt à être relu. Vous pouvez l'ouvrir sur votre téléphone ou votre ordinateur :
 
-**LIEN-APERCU**
+**https://ritaaa08.github.io/OliMy/**
 
 C'est une version de validation (le bandeau jaune en haut le rappelle) : elle n'est pas encore en ligne et n'apparaît pas dans Google. Le site comprend quatre pages : l'accueil, le menu complet avec les prix, les infos pratiques (adresse, horaires, téléphone, plan) et les mentions légales.
 

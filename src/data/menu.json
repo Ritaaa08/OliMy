@@ -1,0 +1,95 @@
+{
+  "currency": "CHF",
+  "categories": [
+    {
+      "id": "banh-mi",
+      "title": "Bánh mì",
+      "subtitle": "Sandwich vietnamien",
+      "note": "Tous nos sandwichs sont garnis de concombre, carottes au vinaigre et coriandre. Pâté maison au foie de poulet et porc.",
+      "image": "cut-banh-mi",
+      "items": [
+        { "n": 1, "name": "Bánh mì chả lụa, thịt nguội", "desc": "Mix porc mariné, jambon vietnamien, pâté, mayonnaise", "price": 10 },
+        { "n": 2, "name": "Bánh mì xá xíu", "desc": "Porc mariné, pâté, mayonnaise", "price": 10 },
+        { "n": 3, "name": "Bánh mì xíu mại", "desc": "Boulettes de porc, sauce tomate", "price": 10 },
+        { "n": 4, "name": "Bánh mì heo quay", "desc": "Porc laqué", "price": 10, "star": true },
+        { "n": 5, "name": "Bánh mì bì", "desc": "Porc râpé", "price": 10 },
+        { "n": 6, "name": "Bánh mì chay", "desc": "Tofu, champignons, vermicelles, sauce ciboulette", "price": 10, "veg": true },
+        { "n": 7, "name": "Bánh mì gà pâté", "desc": "Poulet, pâté, mayonnaise", "price": 10 },
+        { "n": 8, "name": "Bánh mì gà nước mắm", "desc": "Poulet, nuoc mam et sauce ciboulette", "price": 10 },
+        { "n": 9, "name": "Bánh mì gà sả", "desc": "Poulet à la citronnelle", "price": 10 },
+        { "n": 10, "name": "Bánh mì cá mòi", "desc": "Sardines, sauce tomate", "price": 10 },
+        { "n": 11, "name": "Bánh mì bò nướng", "desc": "Bœuf haché mariné", "price": 11 },
+        { "n": 12, "name": "Bánh mì bò xào", "desc": "Bœuf émincé, sauce huîtres et citronnelle", "price": 11 }
+      ]
+    },
+    {
+      "id": "bun",
+      "title": "Bún",
+      "subtitle": "Salade de vermicelles de riz",
+      "note": "Vermicelles de riz, salade, concombre, carottes, cacahuètes et oignons frits, avec la sauce nuoc mam à part.",
+      "image": "cut-buns",
+      "items": [
+        { "name": "Bún poulet", "price": 16 },
+        { "name": "Bún porc", "price": 16 },
+        { "name": "Bún végétarien", "desc": "Tofu et champignons", "price": 16, "veg": true },
+        { "name": "Bún crevettes", "price": 17 },
+        { "name": "Bún bœuf", "price": 17 }
+      ]
+    },
+    {
+      "id": "soupes",
+      "title": "Soupes",
+      "subtitle": "Vermicelles de riz ou nouilles de blé",
+      "image": "cut-soupes",
+      "groups": [
+        {
+          "title": "Nouilles de blé",
+          "items": [
+            { "name": "Soupe nouilles de blé au poulet", "price": 17 },
+            { "name": "Soupe nouilles de blé au porc", "price": 17 },
+            { "name": "Soupe nouilles de blé végétarienne", "price": 17, "veg": true },
+            { "name": "Soupe nouilles de blé aux crevettes", "price": 18 },
+            { "name": "Soupe nouilles de blé, raviolis de crevettes et porc", "price": 18 }
+          ]
+        },
+        {
+          "title": "Bún, vermicelles de riz",
+          "items": [
+            { "name": "Soupe bún au poulet", "price": 17 },
+            { "name": "Soupe bún au porc", "price": 17 },
+            { "name": "Soupe bún végétarienne", "price": 17, "veg": true },
+            { "name": "Soupe bún aux crevettes", "price": 18 },
+            { "name": "Soupe bún, raviolis de crevettes et porc", "price": 18 }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "a-cote",
+      "title": "À côté",
+      "subtitle": "Petites faims et à partager",
+      "image": "cut-dim-sum",
+      "items": [
+        { "name": "Rouleaux de printemps", "desc": "2 pièces", "price": 5 },
+        { "name": "Rouleau d'été", "desc": "1 pièce", "price": 3.5 },
+        { "name": "Brioche au porc", "desc": "Bánh bao maison, la pièce", "price": 6 },
+        { "name": "Dim sum, raviolis aux crevettes", "desc": "5 pièces", "price": 7.5 }
+      ]
+    },
+    {
+      "id": "boissons",
+      "title": "Boissons",
+      "subtitle": "Bubble tea et café vietnamien",
+      "image": "cut-bubble-tea",
+      "items": [
+        {
+          "name": "Bubble tea",
+          "desc": "5 dl, avec perles de tapioca noir, popping boba ou jelly",
+          "price": 6,
+          "flavors": ["Milk tea", "Thai tea", "Mangue", "Fraise", "Fruit de la passion", "Litchi", "Pêche", "Pastèque", "Vanille", "Melon", "Mûre"]
+        },
+        { "name": "Cà phê sữa đá", "desc": "Café glacé au lait concentré, à la vietnamienne", "price": 6 }
+      ]
+    }
+  ]
+}

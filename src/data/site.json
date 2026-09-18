@@ -1,0 +1,114 @@
+{
+  "name": "OliMy",
+  "legalName": "Sandwicherie Vietnamienne OliMy",
+  "tagline": "Bánh mì, bún et bubble tea, avenue de Cour",
+  "description": "Sandwicherie vietnamienne à Lausanne : bánh mì maison dès 10.–, bún, soupes, dim sum et bubble tea. À l'emporter ou au bar, avenue de Cour 67.",
+  "baseUrl": "https://restaurant-olimy.ch",
+  "address": {
+    "street": "Avenue de Cour 67",
+    "postalCode": "1007",
+    "city": "Lausanne",
+    "country": "CH"
+  },
+  "geo": {
+    "lat": 46.51538,
+    "lng": 6.61721
+  },
+  "phone": "076 771 74 74",
+  "phoneIntl": "+41767717474",
+  "hours": [
+    {
+      "days": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "label": "Lundi à vendredi",
+      "open": "10:30",
+      "close": "14:30"
+    },
+    {
+      "days": [
+        6
+      ],
+      "label": "Samedi",
+      "open": "11:00",
+      "close": "18:00"
+    },
+    {
+      "days": [
+        0
+      ],
+      "label": "Dimanche",
+      "closed": true
+    }
+  ],
+  "hoursNote": "Fermé les jours fériés.",
+  "payment": [
+    "Cash",
+    "Cartes",
+    "Twint"
+  ],
+  "service": [
+    "À l'emporter",
+    "Quelques places au bar"
+  ],
+  "links": {
+    "googleMaps": "https://www.google.com/maps/search/?api=1&query=Sandwicherie+Vietnamien+OliMy+Avenue+de+Cour+67+1007+Lausanne",
+    "appleMaps": "https://maps.apple.com/?q=OliMy&address=Avenue+de+Cour+67,+1007+Lausanne",
+    "googleReviews": "https://www.google.com/maps/search/?api=1&query=Sandwicherie+Vietnamien+OliMy+Avenue+de+Cour+67+1007+Lausanne",
+    "mapEmbed": "https://www.google.com/maps?q=Avenue+de+Cour+67,+1007+Lausanne&z=16&output=embed",
+    "instagram": "https://www.instagram.com/olimyfoodanddrink/"
+  },
+  "rating": {
+    "value": "4,5",
+    "label": "sur Google"
+  },
+  "press": [
+    {
+      "source": "24 heures",
+      "quote": "Les meilleurs sandwiches vietnamiens de Suisse se font à l'avenue de Cour",
+      "url": "https://www.24heures.ch/les-meilleurs-sandwiches-vietnamiens-de-suisse-se-font-a-lavenue-de-cour-995715890307"
+    },
+    {
+      "source": "Quand est-ce qu'on mange ?",
+      "quote": "D'excellents bánh bao moelleux",
+      "url": "https://quandestcequonmange.ch/olimy-banh-mi-lausanne/"
+    },
+    {
+      "source": "La Chouquette",
+      "quote": "Des rouleaux d'été et des dim sum extra frais",
+      "url": "https://lachouquette.ch/fiche/banh-mi-olimy-cuisine-vietnamienne-lausanne"
+    }
+  ],
+  "meat": [
+    {
+      "label": "Bœuf et porc",
+      "value": "Suisse"
+    },
+    {
+      "label": "Poulet",
+      "value": "Brésil*, Suisse"
+    },
+    {
+      "label": "Crevettes",
+      "value": "Vietnam"
+    }
+  ],
+  "meatNote": "*Peut avoir été produit avec des stimulateurs de performance non hormonaux, tels que les antibiotiques.",
+  "allergyNote": "Allergies ou intolérances ? Demandez-nous, on vous renseigne volontiers sur chaque plat.",
+  "legal": {
+    "company": "OliMy Sàrl",
+    "uid": "CHE-386.917.164",
+    "register": "Registre du commerce du canton de Vaud",
+    "email": "",
+    "host": "Infomaniak Network SA, Genève (Suisse)"
+  },
+  "credits": {
+    "name": "",
+    "url": ""
+  },
+  "aiImagesNote": "Certaines images d'illustration (plats, boissons, emballages, vues du comptoir) ont été générées ou retouchées à l'aide d'une intelligence artificielle. Elles donnent une idée de nos produits mais ne les représentent pas à l'identique."
+}

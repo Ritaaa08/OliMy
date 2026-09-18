@@ -1,0 +1,14 @@
+# Généré par `npm run build`
+site/
+
+# Dépendances éventuelles
+node_modules/
+
+# Photos sources (lourdes, non nécessaires au build : les images optimisées sont dans src/assets/img)
+photos-pretes/
+Photos/
+menu/
+infos.png
+
+# Système
+.DS_Store

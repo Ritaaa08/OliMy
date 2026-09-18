@@ -1,0 +1,157 @@
+{
+  "hero-plats": {
+    "ratio": 1.499,
+    "widths": [
+      480,
+      720,
+      1000,
+      1400
+    ]
+  },
+  "hero-photo": {
+    "ratio": 1.7768,
+    "widths": [
+      480,
+      800,
+      1200,
+      1600
+    ]
+  },
+  "cut-banh-mi": {
+    "ratio": 0.8197,
+    "widths": [
+      400,
+      640,
+      900
+    ]
+  },
+  "cut-bao-dim-sum": {
+    "ratio": 0.8226,
+    "widths": [
+      400,
+      640,
+      900
+    ]
+  },
+  "cut-bun-crevettes": {
+    "ratio": 0.8299,
+    "widths": [
+      400,
+      640,
+      900
+    ]
+  },
+  "cut-buns": {
+    "ratio": 1.008,
+    "widths": [
+      400,
+      640,
+      900
+    ]
+  },
+  "cut-soupes": {
+    "ratio": 0.996,
+    "widths": [
+      400,
+      640,
+      900
+    ]
+  },
+  "cut-dim-sum": {
+    "ratio": 1.0,
+    "widths": [
+      400,
+      640,
+      900
+    ]
+  },
+  "cut-bubble-tea": {
+    "ratio": 1.0287,
+    "widths": [
+      400,
+      640,
+      900
+    ]
+  },
+  "band-flatlay": {
+    "ratio": 1.7768,
+    "widths": [
+      480,
+      800,
+      1200,
+      1600
+    ]
+  },
+  "band-drinks": {
+    "ratio": 1.3333,
+    "widths": [
+      480,
+      800,
+      1200
+    ]
+  },
+  "band-dim-sum": {
+    "ratio": 1.6153,
+    "widths": [
+      480,
+      800,
+      1200
+    ]
+  },
+  "band-emporter": {
+    "ratio": 1.3843,
+    "widths": [
+      480,
+      800,
+      1200
+    ]
+  },
+  "band-comptoir": {
+    "ratio": 1.9153,
+    "widths": [
+      480,
+      800,
+      1200
+    ]
+  },
+  "real-bun-boeuf": {
+    "ratio": 0.7581,
+    "widths": [
+      400,
+      640,
+      900
+    ]
+  },
+  "real-banh-mi": {
+    "ratio": 1.497,
+    "widths": [
+      400,
+      640,
+      900
+    ]
+  },
+  "real-bun-bubble": {
+    "ratio": 0.856,
+    "widths": [
+      400,
+      640,
+      900
+    ]
+  },
+  "real-bowl-bench": {
+    "ratio": 0.8017,
+    "widths": [
+      400,
+      640,
+      900
+    ]
+  },
+  "real-cups-window": {
+    "ratio": 0.8023,
+    "widths": [
+      400,
+      640,
+      900
+    ]
+  }
+}

@@ -1,5 +1,5 @@
 # Publie automatiquement l'aperçu du site sur GitHub Pages à chaque modification.
-# Pré-requis (une seule fois) : Settings → Pages → Source : « GitHub Actions ».
+# GitHub Pages est activé automatiquement au premier passage (enablement: true).
 name: Aperçu GitHub Pages
 
 on:
@@ -27,6 +27,8 @@ jobs:
       - name: Générer le site (mode aperçu, non indexable)
         run: PREVIEW=1 node src/build.js
       - uses: actions/configure-pages@v5
+        with:
+          enablement: true
       - uses: actions/upload-pages-artifact@v3
         with:
           path: site

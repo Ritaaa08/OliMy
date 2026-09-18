@@ -8,8 +8,7 @@
     "images": "python3 tools/optimize-images.py",
     "build": "node src/build.js",
     "serve": "node serve.js",
-    "dev": "node src/build.js && node serve.js",
-    "apercu": "PREVIEW=1 node src/build.js && rm -rf apercu && cp -R site apercu"
+    "dev": "node src/build.js && node serve.js"
   },
   "engines": {
     "node": ">=20"

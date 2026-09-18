@@ -46,11 +46,6 @@ Les photos sources (`photos-pretes/`, `Photos/`, `menu/`) sont volontairement ho
 (`.gitignore`) : elles pèsent 60 Mo et ne servent qu'à régénérer les images optimisées,
 déjà présentes dans `src/assets/img/`.
 
-Si la source Pages est restée sur « Deploy from a branch » (branche `main`), l'aperçu est servi
-depuis le dossier `apercu/` du dépôt : `npm run apercu` le régénère (mode aperçu), puis
-`git add -A && git commit -m "aperçu" && git push`. L'adresse devient
-`https://<votre-compte>.github.io/<nom-du-depot>/apercu/` (la racine y redirige).
-
 Le texte à envoyer au client est dans `docs/message-client.md`.
 
 ## Voir le site en local

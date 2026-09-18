@@ -35,13 +35,18 @@ de la même façon dans `src/data/site.json`. Le statut « Ouvert / Fermé » se
 
 ## Aperçu pour le client (GitHub Pages)
 
-Le dépôt contient un workflow (`.github/workflows/pages.yml`) qui publie automatiquement
-le site à chaque `git push` sur `main`, en **mode aperçu** : bandeau « Aperçu de validation »,
-`noindex` et `robots.txt` bloqué, pour que cette copie ne soit jamais indexée par Google.
+Le dépôt public `Ritaaa08/OliMy` est publié par GitHub Pages depuis la branche `main`
+(Settings → Pages → « Deploy from a branch », dossier racine). Le site de validation est le
+dossier `apercu/`, généré en **mode aperçu** (bandeau « Aperçu de validation », `noindex`),
+et la racine du dépôt y redirige. Adresse à donner au client : **https://ritaaa08.github.io/OliMy/**.
 
-Une seule fois, dans le dépôt GitHub : **Settings → Pages → Source : « GitHub Actions »**.
-L'adresse de l'aperçu est ensuite `https://<votre-compte>.github.io/<nom-du-depot>/`.
+Pour mettre l'aperçu à jour après une modification :
 
+```bash
+npm run apercu && git add -A && git commit -m "aperçu" && git push
+```
+
+Le fichier `.nojekyll` empêche GitHub de transformer le README en page d'accueil.
 Les photos sources (`photos-pretes/`, `Photos/`, `menu/`) sont volontairement hors du dépôt
 (`.gitignore`) : elles pèsent 60 Mo et ne servent qu'à régénérer les images optimisées,
 déjà présentes dans `src/assets/img/`.

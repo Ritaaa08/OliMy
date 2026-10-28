@@ -21,30 +21,27 @@ BAND = [480, 800, 1200, 1600]
 CUT = [400, 640, 900]
 PHOTO = [400, 640, 900]
 
-# name -> (source, crop box or None, widths)
+# name -> (source, crop box or None, widths). La source peut aussi être une fonction qui renvoie l'image.
+# Le bubble tea n'est plus vendu : les recadrages ci-dessous sortent les gobelets à perles du champ.
 IMAGES = {
     # Détourages (fond transparent)
-    "hero-plats": (CUTOUT / "premire image.png", None, [480, 720, 1000, 1400]),
-    "hero-photo": (PRETES / "1.png", None, BAND),
-    "cut-banh-mi": (CUTOUT / "ChatGPT Image 17 sept. 2026 à 22_04_24.png", None, CUT),
-    "cut-bao-dim-sum": (CUTOUT / "ChatGPT Image 17 sept. 2026 à 22_21_10.png", None, CUT),
+    "hero-plats": (lambda: compose_plats_cafe(), None, [480, 720, 1000, 1400]),
+    "cut-banh-mi": (CUTOUT / "ChatGPT Image 17 sept. 2026 à 22_00_35.png", None, CUT),
     "cut-bun-crevettes": (CUTOUT / "ChatGPT Image 17 sept. 2026 à 22_21_26.png", None, CUT),
     "cut-buns": (CUTOUT / "ChatGPT Image 17 sept. 2026 à 22_28_26.png", None, CUT),
     "cut-soupes": (CUTOUT / "ChatGPT Image 17 sept. 2026 à 22_28_37.png", None, CUT),
     "cut-dim-sum": (CUTOUT / "ChatGPT Image 17 sept. 2026 à 22_28_53.png", None, CUT),
-    "cut-bubble-tea": (CUTOUT / "ChatGPT Image 17 sept. 2026 à 22_29_03.png", None, CUT),
-    # Visuels d'ambiance (recadrés pour sortir le panneau mural du champ)
+    "cut-cafe": (CUTOUT / "cafe-glace-grains.png", None, CUT),
+    "cut-cafe-couvercle": (CUTOUT / "cafe-glace-couvercle.png", None, CUT),
+    # Visuels d'ambiance (recadrés pour sortir le panneau mural et les gobelets de bubble tea du champ)
+    "hero-photo": (PRETES / "1.png", (0, 0, 1368, 941), BAND),
     "band-flatlay": (PRETES / "ChatGPT Image 17 sept. 2026 à 22_38_23.png", None, BAND),
-    "band-drinks": (PRETES / "ChatGPT Image 17 sept. 2026 à 22_38_50.png", None, BAND),
-    "band-dim-sum": (PRETES / "ChatGPT Image 17 sept. 2026 à 22_39_01.png", (0, 0, 1520, 941), BAND),
-    "band-emporter": (PRETES / "9b7d0218-62d9-4b0b-854d-ac53bd2b7976.png", (0, 40, 1448, 1086), BAND),
-    "band-comptoir": (PRETES / "d498a3b3-cbb2-4f6d-a85f-fb152ef156c3.png", (0, 330, 1448, 1086), BAND),
+    "band-emporter": (PRETES / "9b7d0218-62d9-4b0b-854d-ac53bd2b7976.png", (0, 40, 972, 960), [480, 800, 972]),
+    "band-comptoir": (PRETES / "d498a3b3-cbb2-4f6d-a85f-fb152ef156c3.png", (555, 330, 1448, 1086), BAND),
     # Vraies photos
     "real-bun-boeuf": (REAL / "avis client3.png", None, PHOTO),
     "real-banh-mi": (REAL / "avis client5.png", None, PHOTO),
-    "real-bun-bubble": (REAL / "avis clients 2.png", None, PHOTO),
     "real-bowl-bench": (REAL / "avis de clients.png", None, PHOTO),
-    "real-cups-window": (REAL / "bubble tea.png", None, PHOTO),
 }
 
 
@@ -73,10 +70,35 @@ def save_webp(im: Image.Image, dest: Path, width: int) -> None:
     im.save(dest, "WEBP", quality=QUALITY, method=6)
 
 
+def compose_plats_cafe() -> Image.Image:
+    """Bande du menu : le bubble tea de « premire image » est remplacé par le café glacé.
+
+    On efface le gobelet jusqu'au bord du papier du bánh mì (relevé au pixel près),
+    puis on glisse le café derrière : le papier passe devant, comme sur l'original.
+    """
+    from PIL import ImageDraw
+
+    base = load(CUTOUT / "premire image.png")
+    paper_edge = [(472, 448), (422, 450), (375, 454), (342, 461), (315, 471), (299, 481),
+                  (275, 501), (259, 521), (242, 551), (202, 602), (160, 651), (123, 712)]
+    mask = Image.new("L", base.size, 0)
+    ImageDraw.Draw(mask).polygon([(0, 0), (472, 0), *paper_edge, (0, 712)], fill=255)
+    cutout = base.copy()
+    cutout.putalpha(Image.composite(Image.new("L", base.size, 0), base.getchannel("A"), mask))
+
+    cafe = trim_alpha(load(CUTOUT / "cafe-glace-couvercle.png"), pad=0)
+    width = 400  # largeur du couvercle de l'ancien gobelet
+    cafe = cafe.resize((width, round(cafe.height * width / cafe.width)), Image.LANCZOS)
+    scene = Image.new("RGBA", base.size, (0, 0, 0, 0))
+    scene.alpha_composite(cafe, (225 - width // 2, 692 - cafe.height))
+    scene.alpha_composite(cutout)
+    return scene
+
+
 def build_images() -> dict:
     manifest = {}
     for name, (src, crop, widths) in IMAGES.items():
-        im = load(src)
+        im = src() if callable(src) else load(src)
         if crop:
             im = im.crop(crop)
         if has_alpha(im):
@@ -132,7 +154,7 @@ def build_icons() -> None:
 
 
 def build_og() -> None:
-    """Image de partage 1200x630 : logo blanc + bánh mì sur fond violet."""
+    """Image de partage 1200x630 : logo blanc + plats et café glacé sur fond violet."""
     W, H = 1200, 630
     og = Image.new("RGB", (W, H), "#4C0142")
     logo = trim_alpha(load(ROOT / "logo olimy.png"), pad=4)
@@ -141,7 +163,7 @@ def build_og() -> None:
     lw = 380
     white = white.resize((lw, round(logo.height * lw / logo.width)), Image.LANCZOS)
     og.paste(white, (60, (H - white.height) // 2), white)
-    plats = trim_alpha(load(CUTOUT / "premire image.png"))
+    plats = trim_alpha(compose_plats_cafe())
     ph = 520
     plats = plats.resize((round(plats.width * ph / plats.height), ph), Image.LANCZOS)
     og.paste(plats, (W - plats.width - 30, (H - ph) // 2), plats)

@@ -1,8 +1,8 @@
 {
   "name": "OliMy",
   "legalName": "Sandwicherie Vietnamienne OliMy",
-  "tagline": "Bánh mì, bún et bubble tea, avenue de Cour",
-  "description": "Sandwicherie vietnamienne à Lausanne : bánh mì maison dès 10.–, bún, soupes, dim sum et bubble tea. À l'emporter ou au bar, avenue de Cour 67.",
+  "tagline": "Bánh mì, bún et soupes, avenue de Cour",
+  "description": "Sandwicherie vietnamienne à Lausanne : bánh mì maison dès 10.–, bún, soupes, dim sum et café glacé vietnamien. À l'emporter ou au bar, avenue de Cour 67.",
   "baseUrl": "https://restaurant-olimy.ch",
   "address": {
     "street": "Avenue de Cour 67",
@@ -35,7 +35,7 @@
       ],
       "label": "Samedi",
       "open": "11:00",
-      "close": "18:00"
+      "close": "16:00"
     },
     {
       "days": [

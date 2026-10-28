@@ -1,11 +1,11 @@
 // Serveur statique minimal pour prévisualiser le dossier `site/` (aucune dépendance).
-// Usage : node serve.js  ->  http://localhost:4173
+// Usage : node serve.js [port]  ->  http://localhost:4173 par défaut
 import { createServer } from "node:http";
 import { createReadStream, existsSync, statSync } from "node:fs";
 import { extname, join, normalize, resolve } from "node:path";
 
 const ROOT = resolve("site");
-const PORT = Number(process.env.PORT) || 4173;
+const PORT = Number(process.env.PORT || process.argv[2]) || 4173;
 
 const TYPES = {
   ".html": "text/html; charset=utf-8",

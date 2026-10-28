@@ -1,8 +1,9 @@
 // Petits utilitaires de rendu HTML partagés par les pages.
 import { readFileSync } from "node:fs";
 import { join } from "node:path";
+import { fileURLToPath } from "node:url";
 
-const ROOT = new URL("../", import.meta.url).pathname;
+const ROOT = fileURLToPath(new URL("../", import.meta.url));
 const ICONS = join(ROOT, "assets", "icons");
 const iconCache = new Map();
 

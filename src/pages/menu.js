@@ -7,16 +7,12 @@ function renderItem(item) {
     item.veg ? '<span class="chip chip-veg">Végétarien</span>' : "",
     item.star ? '<span class="chip">Best-seller</span>' : "",
   ].join("");
-  const flavors = item.flavors
-    ? `<ul class="flavors" role="list">${item.flavors.map((f) => `<li class="chip">${esc(f)}</li>`).join("")}</ul>`
-    : "";
   return `
     <li class="${classes}">
       <span class="n" aria-hidden="true">${item.n ?? ""}</span>
       <div>
         <h3 class="name">${esc(item.name)}${badges}</h3>
         ${item.desc ? `<p class="desc">${esc(item.desc)}</p>` : ""}
-        ${flavors}
       </div>
       <span class="price">${price(item.price)}</span>
     </li>`;
@@ -82,7 +78,7 @@ export function renderMenu({ site, menu, images, preview }) {
 </section>
 <div class="wrap">
   <figure class="page-band is-cutout">
-    ${img(images, "hero-plats", { alt: "Bubble tea, bánh mì au porc laqué, bol de bún et chips de crevettes OliMy", sizes: "(min-width: 900px) 680px, 100vw", priority: true })}
+    ${img(images, "hero-plats", { alt: "Café glacé, bánh mì au porc laqué, bol de bún et chips de crevettes OliMy", sizes: "(min-width: 900px) 680px, 100vw", priority: true })}
   </figure>
 </div>
 
@@ -110,8 +106,8 @@ ${cats}
     site,
     preview,
     page: "menu",
-    title: "Menu et prix, OliMy Lausanne : bánh mì dès 10.–, bún, soupes, bubble tea",
-    description: "La carte complète d'OliMy avec les prix : 12 bánh mì à 10 ou 11 francs, bún dès 16.–, soupes, bánh bao, dim sum et bubble tea 11 parfums à 6.–.",
+    title: "Menu et prix, OliMy Lausanne : bánh mì dès 10.–, bún, soupes, café glacé",
+    description: "La carte complète d'OliMy avec les prix : 12 bánh mì à 10 ou 11 francs, bún dès 16.–, soupes, bánh bao, dim sum et café glacé vietnamien à 6.–.",
     body,
     jsonLd: [menuJsonLd(site, menu)],
     preload: [preloadLink(images, "hero-plats", "(min-width: 900px) 680px, 100vw")],

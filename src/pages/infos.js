@@ -14,7 +14,7 @@ export function renderInfos({ site, images, preview }) {
 </section>
 <div class="wrap">
   <figure class="page-band is-natural">
-    ${img(images, "band-emporter", { alt: "Sac OliMy, bánh mì emballé et bubble tea sur le comptoir", sizes: "(min-width: 900px) 820px, 100vw", priority: true })}
+    ${img(images, "band-emporter", { alt: "Sac OliMy et bánh mì emballé sur le comptoir", sizes: "(min-width: 900px) 820px, 100vw", priority: true })}
   </figure>
 </div>
 

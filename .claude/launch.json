@@ -4,8 +4,11 @@
     {
       "name": "olimy",
       "runtimeExecutable": "node",
-      "runtimeArgs": ["serve.js"],
-      "port": 4173
+      "runtimeArgs": [
+        "serve.js",
+        "4174"
+      ],
+      "port": 4174
     }
   ]
 }

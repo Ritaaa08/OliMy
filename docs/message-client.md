@@ -21,12 +21,12 @@ Pour cela, j'ai besoin d'un accès à votre espace Infomaniak : le plus simple e
 **Merci de vérifier et de me confirmer**
 
 1. Tous les prix et les descriptions du menu (page « Menu »).
-2. Les horaires : lundi à vendredi 10h30 à 14h30, samedi 11h à 18h, fermé dimanche et jours fériés.
+2. Les horaires : lundi à vendredi 10h30 à 14h30, samedi 11h à 16h, fermé dimanche et jours fériés.
 3. Le téléphone affiché : 076 771 74 74.
 4. Une adresse e-mail de contact à indiquer dans les mentions légales.
 5. La provenance des viandes affichée (bœuf et porc Suisse, poulet Brésil et Suisse, crevettes Vietnam) correspond bien à votre affichage actuel.
 6. Les citations de presse (24 heures, Quand est-ce qu'on mange ?, La Chouquette) et la note Google 4,5 : d'accord pour les afficher ?
-7. Les photos de la section « Dans l'assiette » viennent d'avis Google publiés par des clients. Pour être en règle, il faudrait les remplacer par vos propres photos : 4 ou 5 photos prises avec votre téléphone suffisent (un bánh mì, un bún, un bubble tea, le comptoir, la vitrine). Envoyez-les-moi et je les intègre.
+7. Les photos de la section « Dans l'assiette » viennent d'avis Google publiés par des clients. Pour être en règle, il faudrait les remplacer par vos propres photos : 4 ou 5 photos prises avec votre téléphone suffisent (un bánh mì, un bún, un café glacé, le comptoir, la vitrine). Envoyez-les-moi et je les intègre.
 8. Certaines images d'illustration ont été créées par intelligence artificielle à partir de vos produits ; c'est indiqué dans les mentions légales. Si vous préférez uniquement de vraies photos, dites-le-moi.
 
 Et bien sûr, toute remarque sur les textes, les couleurs ou l'ordre des sections est la bienvenue.

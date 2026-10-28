@@ -2,13 +2,14 @@
 // Usage : node src/build.js
 import { cpSync, mkdirSync, readFileSync, rmSync, writeFileSync } from "node:fs";
 import { join } from "node:path";
+import { fileURLToPath } from "node:url";
 import { renderHome } from "./pages/home.js";
 import { renderMenu } from "./pages/menu.js";
 import { renderInfos } from "./pages/infos.js";
 import { renderMentions } from "./pages/mentions.js";
 import { renderNotFound } from "./pages/notfound.js";
 
-const SRC = new URL("./", import.meta.url).pathname;
+const SRC = fileURLToPath(new URL("./", import.meta.url));
 const OUT = join(SRC, "..", "site");
 
 const readJson = (name) => JSON.parse(readFileSync(join(SRC, "data", name), "utf8"));

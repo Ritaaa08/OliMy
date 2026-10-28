@@ -1,6 +1,6 @@
 {
   "hero-plats": {
-    "ratio": 1.499,
+    "ratio": 1.4813,
     "widths": [
       480,
       720,
@@ -8,25 +8,8 @@
       1400
     ]
   },
-  "hero-photo": {
-    "ratio": 1.7768,
-    "widths": [
-      480,
-      800,
-      1200,
-      1600
-    ]
-  },
   "cut-banh-mi": {
-    "ratio": 0.8197,
-    "widths": [
-      400,
-      640,
-      900
-    ]
-  },
-  "cut-bao-dim-sum": {
-    "ratio": 0.8226,
+    "ratio": 0.8125,
     "widths": [
       400,
       640,
@@ -65,12 +48,28 @@
       900
     ]
   },
-  "cut-bubble-tea": {
-    "ratio": 1.0287,
+  "cut-cafe": {
+    "ratio": 0.8066,
     "widths": [
       400,
       640,
       900
+    ]
+  },
+  "cut-cafe-couvercle": {
+    "ratio": 0.8003,
+    "widths": [
+      400,
+      640,
+      900
+    ]
+  },
+  "hero-photo": {
+    "ratio": 1.4538,
+    "widths": [
+      480,
+      800,
+      1200
     ]
   },
   "band-flatlay": {
@@ -82,36 +81,19 @@
       1600
     ]
   },
-  "band-drinks": {
-    "ratio": 1.3333,
-    "widths": [
-      480,
-      800,
-      1200
-    ]
-  },
-  "band-dim-sum": {
-    "ratio": 1.6153,
-    "widths": [
-      480,
-      800,
-      1200
-    ]
-  },
   "band-emporter": {
-    "ratio": 1.3843,
+    "ratio": 1.0565,
     "widths": [
       480,
       800,
-      1200
+      972
     ]
   },
   "band-comptoir": {
-    "ratio": 1.9153,
+    "ratio": 1.1812,
     "widths": [
       480,
-      800,
-      1200
+      800
     ]
   },
   "real-bun-boeuf": {
@@ -130,24 +112,8 @@
       900
     ]
   },
-  "real-bun-bubble": {
-    "ratio": 0.856,
-    "widths": [
-      400,
-      640,
-      900
-    ]
-  },
   "real-bowl-bench": {
     "ratio": 0.8017,
-    "widths": [
-      400,
-      640,
-      900
-    ]
-  },
-  "real-cups-window": {
-    "ratio": 0.8023,
     "widths": [
       400,
       640,

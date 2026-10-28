@@ -122,8 +122,8 @@ ${body}
 <footer class="footer">
   <div class="wrap">
     <div>
-      <img src="img/logo-white-360.webp" srcset="img/logo-white-360.webp 360w, img/logo-white-720.webp 720w" sizes="190px" width="360" height="173" alt="OliMy, bubble tea, bánh mì, bún" loading="lazy">
-      <p class="mt-1">Sandwicherie vietnamienne à Lausanne. Bánh mì, bún, soupes, dim sum et bubble tea, à l'emporter ou au bar.</p>
+      <img src="img/logo-white-360.webp" srcset="img/logo-white-360.webp 360w, img/logo-white-720.webp 720w" sizes="190px" width="360" height="173" alt="OliMy" loading="lazy">
+      <p class="mt-1">Sandwicherie vietnamienne à Lausanne. Bánh mì, bún, soupes, dim sum et café glacé, à l'emporter ou au bar.</p>
     </div>
     <div>
       <h3>Adresse</h3>

@@ -12,8 +12,8 @@
         { "n": 2, "name": "Bánh mì xá xíu", "desc": "Porc mariné, pâté, mayonnaise", "price": 10 },
         { "n": 3, "name": "Bánh mì xíu mại", "desc": "Boulettes de porc, sauce tomate", "price": 10 },
         { "n": 4, "name": "Bánh mì heo quay", "desc": "Porc laqué", "price": 10, "star": true },
-        { "n": 5, "name": "Bánh mì bì", "desc": "Porc râpé", "price": 10 },
-        { "n": 6, "name": "Bánh mì chay", "desc": "Tofu, champignons, vermicelles, sauce ciboulette", "price": 10, "veg": true },
+        { "n": 5, "name": "Bánh mì bì", "desc": "Porc râpé, vermicelles", "price": 10 },
+        { "n": 6, "name": "Bánh mì chay", "desc": "Tofu, champignons, sauce ciboulette", "price": 10, "veg": true },
         { "n": 7, "name": "Bánh mì gà pâté", "desc": "Poulet, pâté, mayonnaise", "price": 10 },
         { "n": 8, "name": "Bánh mì gà nước mắm", "desc": "Poulet, nuoc mam et sauce ciboulette", "price": 10 },
         { "n": 9, "name": "Bánh mì gà sả", "desc": "Poulet à la citronnelle", "price": 10 },
@@ -79,15 +79,9 @@
     {
       "id": "boissons",
       "title": "Boissons",
-      "subtitle": "Bubble tea et café vietnamien",
-      "image": "cut-bubble-tea",
+      "subtitle": "Café vietnamien",
+      "image": "cut-cafe",
       "items": [
-        {
-          "name": "Bubble tea",
-          "desc": "5 dl, avec perles de tapioca noir, popping boba ou jelly",
-          "price": 6,
-          "flavors": ["Milk tea", "Thai tea", "Mangue", "Fraise", "Fruit de la passion", "Litchi", "Pêche", "Pastèque", "Vanille", "Melon", "Mûre"]
-        },
         { "name": "Cà phê sữa đá", "desc": "Café glacé au lait concentré, à la vietnamienne", "price": 6 }
       ]
     }

@@ -2,15 +2,15 @@ import { esc, img, icon, price, externalAttrs, preloadLink } from "../lib/html.j
 import { layout, hoursTable } from "../layout.js";
 
 const BEST = [
-  { name: "Bánh mì heo quay", desc: "Porc laqué, pâté maison, légumes croquants", price: 10, image: "cut-banh-mi", href: "menu.html#banh-mi", alt: "Bánh mì au porc laqué avec un thé matcha glacé" },
+  { name: "Bánh mì heo quay", desc: "Porc laqué, pâté maison, légumes croquants", price: 10, image: "cut-banh-mi", href: "menu.html#banh-mi", alt: "Bánh mì OliMy garni de porc, coriandre, carottes et concombre, avec sa sauce" },
   { name: "Bún", desc: "Poulet, porc, tofu, crevettes ou bœuf sur vermicelles de riz", from: 16, image: "cut-buns", href: "menu.html#bun", alt: "Bols de bún au poulet, porc, tofu, crevettes et bœuf" },
   { name: "Bánh bao et dim sum", desc: "Brioche au porc, raviolis aux crevettes, rouleaux", from: 3.5, image: "cut-dim-sum", href: "menu.html#a-cote", alt: "Brioche au porc, raviolis vapeur et rouleaux d'été sur un plateau en bambou" },
-  { name: "Bubble tea", desc: "11 parfums, perles de tapioca ou popping boba", price: 6, image: "cut-bubble-tea", href: "menu.html#boissons", alt: "Cinq bubble teas OliMy de couleurs différentes" },
+  { name: "Cà phê sữa đá", desc: "Café glacé au lait concentré, à la vietnamienne", price: 6, image: "cut-cafe", href: "menu.html#boissons", alt: "Café glacé OliMy au lait concentré, avec des grains de café" },
 ];
 
 export function renderHome({ site, menu, images, preview }) {
   const drinks = menu.categories.find((c) => c.id === "boissons");
-  const bubble = drinks.items.find((i) => i.flavors);
+  const coffee = drinks.items.find((i) => i.name.startsWith("Cà phê"));
 
   const tiles = BEST.map(
     (t) => `
@@ -21,8 +21,6 @@ export function renderHome({ site, menu, images, preview }) {
         <span class="price">${t.from ? `dès ${price(t.from)}` : price(t.price)}</span>
       </a>`,
   ).join("");
-
-  const flavors = bubble.flavors.map((f) => `<li class="chip">${esc(f)}</li>`).join("");
 
   const [lead, ...others] = site.press;
   const quotes = others
@@ -39,8 +37,8 @@ export function renderHome({ site, menu, images, preview }) {
 <section class="hero">
   <div class="wrap">
     <div class="hero-copy">
-      <h1>Bánh mì, bún et bubble tea</h1>
-      <p class="lead">Soupes, bánh bao et dim sum aussi. Cuisine vietnamienne à l'avenue de Cour, à Lausanne, à l'emporter ou au bar.</p>
+      <h1>Bánh mì, bún et soupes</h1>
+      <p class="lead">Bánh bao, dim sum et café glacé aussi. Cuisine vietnamienne à l'avenue de Cour, à Lausanne, à l'emporter ou au bar.</p>
       <div class="hero-actions">
         <a class="btn btn-primary" href="menu.html">${icon("tools-kitchen-2")}Voir le menu</a>
         <a class="btn btn-secondary" href="${site.links.googleMaps}" ${externalAttrs}>${icon("navigation")}Itinéraire</a>
@@ -48,7 +46,7 @@ export function renderHome({ site, menu, images, preview }) {
       <p class="status" data-status hidden></p>
     </div>
     <figure class="hero-figure is-photo">
-      ${img(images, "hero-photo", { alt: "Bánh mì, bol de bún au porc et bubble tea matcha OliMy sur une table en bois au soleil", sizes: "(min-width: 900px) 560px, 100vw", priority: true })}
+      ${img(images, "hero-photo", { alt: "Bánh mì au porc grillé et bol de bún OliMy sur une table en bois au soleil", sizes: "(min-width: 900px) 560px, 100vw", priority: true })}
     </figure>
   </div>
 </section>
@@ -86,14 +84,12 @@ export function renderHome({ site, menu, images, preview }) {
     <div class="drinks reveal">
       <div>
         <div class="section-head">
-          <h2>Bubble tea, 11 parfums</h2>
-          <p>Thé au lait ou aux fruits, 5 dl, avec perles de tapioca noir, popping boba ou jelly. ${price(bubble.price)} le gobelet.</p>
+          <h2>Le café glacé vietnamien</h2>
+          <p>Cà phê sữa đá : café et lait concentré sucré, servi sur glace. ${price(coffee.price)} le gobelet.</p>
         </div>
-        <ul class="flavors" role="list">${flavors}</ul>
-        <p class="muted">Et le cà phê sữa đá, café glacé au lait concentré à la vietnamienne, est aussi à ${price(6)}</p>
       </div>
-      <figure>
-        ${img(images, "band-drinks", { alt: "Cinq bubble teas OliMy aux parfums différents sur une table turquoise, avec mangue, matcha et fruit de la passion", sizes: "(min-width: 900px) 640px, 100vw" })}
+      <figure class="is-cutout">
+        ${img(images, "cut-cafe-couvercle", { alt: "Café glacé OliMy au lait concentré, dans son gobelet", sizes: "(min-width: 900px) 340px, 70vw" })}
       </figure>
     </div>
   </div>
@@ -107,9 +103,7 @@ export function renderHome({ site, menu, images, preview }) {
     <div class="gallery reveal">
       <figure class="is-wide">${img(images, "real-banh-mi", { alt: "Bánh mì OliMy dans son papier, coriandre et carottes qui dépassent", sizes: "(min-width: 900px) 780px, 100vw" })}</figure>
       <figure>${img(images, "real-bun-boeuf", { alt: "Bol de bún au bœuf avec oignons frits, carottes et sauce nuoc mam", sizes: "(min-width: 900px) 390px, 50vw" })}</figure>
-      <figure>${img(images, "real-bun-bubble", { alt: "Bún au porc dans un bol à emporter, avec un bubble tea", sizes: "(min-width: 900px) 390px, 50vw" })}</figure>
       <figure>${img(images, "real-bowl-bench", { alt: "Bún au poulet et café glacé posés sur un banc", sizes: "(min-width: 900px) 390px, 50vw" })}</figure>
-      <figure>${img(images, "real-cups-window", { alt: "Bubble teas OliMy alignés devant la vitrine", sizes: "(min-width: 900px) 390px, 50vw" })}</figure>
     </div>
   </div>
 </section>
@@ -136,7 +130,7 @@ export function renderHome({ site, menu, images, preview }) {
 <section class="section" id="visite">
   <div class="wrap split is-flipped">
     <figure class="reveal">
-      ${img(images, "band-comptoir", { alt: "Plateau avec un bánh mì, un bún et un bubble tea devant le comptoir d'OliMy", sizes: "(min-width: 900px) 560px, 100vw" })}
+      ${img(images, "band-comptoir", { alt: "Plateau avec un bánh mì et un bún devant le comptoir d'OliMy", sizes: "(min-width: 900px) 560px, 100vw" })}
     </figure>
     <div class="reveal">
       <h2>Passez nous voir</h2>
@@ -155,7 +149,7 @@ export function renderHome({ site, menu, images, preview }) {
     site,
     preview,
     page: "index",
-    title: "OliMy, sandwicherie vietnamienne à Lausanne : bánh mì, bún, bubble tea",
+    title: "OliMy, sandwicherie vietnamienne à Lausanne : bánh mì, bún, soupes",
     description: site.description,
     body,
     preload: [preloadLink(images, "hero-photo", "(min-width: 900px) 560px, 100vw")],
